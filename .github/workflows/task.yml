@@ -8,6 +8,12 @@ jobs:
     - name: cloning-repository
       uses: actions/checkout@v3
 
+    - name: setup-node-cache
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        cache: 'npm'
+
     - name: using-setup
       run: make setup
 
